@@ -1,0 +1,9 @@
+<h1>Hola Show Pets</h1>
+
+<%= link_to("Edit your pet's data", edit_user_pet_path(current_user.id)) %>
+<%= link_to("Erase the pet's data", user_pet_path(current_user.id), method: :delete, data:{confirm: "are you sure?"}) %>
+
+<div><%= @pet.pet_name %></div>
+<div><%= @pet.pet_age %></div>
+<div><%= @pet.pet_race %></div>
+

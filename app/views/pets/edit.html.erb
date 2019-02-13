@@ -1,0 +1,12 @@
+<%= form_for [current_user, @pet] do |f| %>
+  <%= f.label :pet_name %>:
+  <%= f.text_field :pet_name %><br />
+
+  <%= f.label :pet_age %>:
+  <%= f.number_field :pet_age %><br />
+
+  <%= f.label :pet_race %>:
+  <%= f.text_field :pet_race %><br />
+
+  <%= f.submit 'save', data:{confirm: 'save this data?'}  %>
+<% end %>
