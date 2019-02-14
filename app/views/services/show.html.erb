@@ -1,0 +1,5 @@
+<%= link_to("Edit 'Service' data", edit_service_path) %>
+<%= link_to("Erase this Service", service_path, method: :delete, data:{confirm: "are you sure?"}) %>
+
+<div><%= @service.service_name %></div>
+<div><%= @service.service_cost %></div>
