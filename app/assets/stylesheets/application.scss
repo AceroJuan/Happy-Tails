@@ -34,6 +34,9 @@ p {
 font-family: Arial, Helvetica, sans-serif;
 font-size: 20px;
 }
+.name {
+    max-width: 300px;
+}
 .email {
     max-width: 300px;
 }
@@ -43,3 +46,7 @@ font-size: 20px;
 .address {
     max-width: 300px;
 }
+.phone {
+    max-width: 300px;
+}
+

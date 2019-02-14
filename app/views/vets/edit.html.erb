@@ -1,0 +1,17 @@
+<center>
+<%= form_for @vet do |f| %>
+  <div class="form-group">
+    <%= f.label :vet_name %>:
+    <%= f.text_field :vet_name, class: "form-control name" %><br />
+  </div>
+  <div class="form-group">
+    <%= f.label :vet_email %>:
+    <%= f.text_field :vet_email, class: "form-control email" %><br />
+  </div>
+  <div class="form-group">
+    <%= f.label :vet_phone %>:
+    <%= f.text_field :vet_phone, class: "form-control phone" %><br />
+  </div>
+  <%= f.submit 'save', data:{confirm: 'save this data?'}  %>
+<% end %>
+</center>

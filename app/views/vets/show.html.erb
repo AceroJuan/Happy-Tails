@@ -1,1 +1,6 @@
-<h1>hi there</h1>
+<%= link_to("Edit your data", edit_vet_path) %>
+<%= link_to("Erase the data", vet_path, method: :delete, data:{confirm: "are you sure?"}) %>
+
+<div><%= @vet.vet_name %></div>
+<div><%= @vet.vet_email %></div>
+<div><%= @vet.vet_phone %></div>
