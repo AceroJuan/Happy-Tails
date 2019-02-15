@@ -17,7 +17,7 @@ class ServicesController < ApplicationController
     end
     def update
         Service.find(params[:id]).update(service_params) 
-        redirect_to "/services/#{params[:id]}"
+        redirect_to "/services"
     end
     def destroy
         service = Service.find(params[:id])

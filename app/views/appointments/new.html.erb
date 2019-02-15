@@ -1,13 +1,14 @@
 <center>
-<%= form_for @appointment do |f| %>
-  <div class="form-group">
-    <%= f.label :appointment_time %>:
-    <%= f.time_field :appointment_time %><br />
-  </div>
-  <div class="form-group">
-    <%= f.label :service_id %>:
-    <%= f.text_field :service_id %><br />
-  </div>
-  <%= f.submit 'save', data:{confirm: 'save this data?'}  %>
+<%= simple_form_for @appointment do |f| %>
+  <%= f.input :appointment_time %>
+        <%= f.input :pet_id,
+                  collection: Pet.all,  
+                  :label_method => lambda { |pet| "#{pet.pet_name}"},
+                  :input_html => {:class => 'chosen-select'} %>  
+        <%= f.input :service_id,
+                  collection: Service.all,  
+                  :label_method => lambda { |service| "#{service.service_name}"},
+                  :input_html => {:class => 'chosen-select'} %>  
+  <%= f.button :submit %>
 <% end %>
 </center>

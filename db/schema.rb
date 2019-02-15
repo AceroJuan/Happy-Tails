@@ -10,18 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190213164300) do
+ActiveRecord::Schema.define(version: 20190215034131) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "appointment_time"
-    t.integer "user_id"
-    t.integer "vet_id"
     t.integer "service_id"
     t.integer "pet_id"
     t.index ["pet_id"], name: "index_appointments_on_pet_id"
     t.index ["service_id"], name: "index_appointments_on_service_id"
-    t.index ["user_id"], name: "index_appointments_on_user_id"
-    t.index ["vet_id"], name: "index_appointments_on_vet_id"
   end
 
   create_table "pets", force: :cascade do |t|
@@ -39,6 +35,8 @@ ActiveRecord::Schema.define(version: 20190213164300) do
     t.integer "service_cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "vet_id"
+    t.index ["vet_id"], name: "index_services_on_vet_id"
   end
 
   create_table "users", force: :cascade do |t|
