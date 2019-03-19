@@ -1,9 +1,0 @@
-<h1>Hola Show Users</h1>
-
-<div class="navbar">  
-    <ul>
-        <% @pets.each do |pet| %>
-            <li><%= link_to(pet.pet_name, user_pet_path(@user.id, pet.id)) %></li>
-        <% end %>     
-    </ul>
-</div>

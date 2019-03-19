@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6', '>= 5.1.6.1'
 # Use sqlite3 as the database for Active Record
-
+gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt-ruby', '3.0.0', :require => 'bcrypt'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -39,11 +39,10 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem 'sqlite3', '~> 1.3.6'
+  
 end
 
 group :production do
-  gem 'pg'
 end
 
 group :development do
@@ -54,7 +53,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'rack-cors', :require => 'rack/cors'
 gem 'devise'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
-gem 'simple_form', '~> 4.1'
+gem 'simple_form'

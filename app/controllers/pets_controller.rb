@@ -1,4 +1,5 @@
 class PetsController < ApplicationController
+
     def show
         @user = User.find(params[:user_id])
         @pet = Pet.find(params[:id])
