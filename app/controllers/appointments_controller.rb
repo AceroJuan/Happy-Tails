@@ -1,8 +1,9 @@
 class AppointmentsController < ApplicationController
     def index
-        @appointment = Appointment.all
+        @appointments = Appointment.all
     end
     def show
+        @appointment = Appointment.find(params[:id])
     end
     def new
         @appointment = Appointment.new
@@ -11,7 +12,18 @@ class AppointmentsController < ApplicationController
         appointment = Appointment.create(appointment_params)
         redirect_to "/appointments"
     end
-
+    def edit
+        @appointment = Appointment.find(params[:id])
+    end
+    def update
+        Appointment.find(params[:id]).update(appointment_params) 
+        redirect_to "/appointments"
+    end
+    def destroy
+        appointment = Appointment.find(params[:id])
+        appointment.delete
+        redirect_to "/appointments"
+    end
     private
         
         def appointment_params

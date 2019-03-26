@@ -1,14 +1,15 @@
 <center>
+<br />
 <%= simple_form_for @appointment do |f| %>
-  <%= f.input :appointment_time %>
+  <%= f.date_field :appointment_time %>
         <%= f.input :pet_id,
                   collection: Pet.all,  
                   :label_method => lambda { |pet| "#{pet.pet_name}"},
-                  :input_html => {:class => 'chosen-select'} %>  
+                  :input_html => {:class => 'form-control pet'} %>  
         <%= f.input :service_id,
                   collection: Service.all,  
                   :label_method => lambda { |service| "#{service.service_name}"},
-                  :input_html => {:class => 'chosen-select'} %>  
+                  :input_html => {:class => 'form-control service'} %>  
   <%= f.button :submit %>
 <% end %>
 </center>

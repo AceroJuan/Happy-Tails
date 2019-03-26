@@ -1,0 +1,6 @@
+<%= link_to("Edit 'Appointment' data", edit_appointment_path) %>
+<%= link_to("Erase this Service", appointment_path, method: :delete, data:{confirm: "are you sure?"}) %>
+
+<div><%= @appointment.appointment_time %></div>
+<br />
+<%= link_to("Back", "/appointments") %>

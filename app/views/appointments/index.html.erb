@@ -1,0 +1,8 @@
+<% @appointments.each do |a| %>
+<li> <%="Mascota: #{a.pet.pet_name}, Motivo: #{a.service.service_name}, Fecha: #{a.appointment_time.strftime("%m, %d, %Y")}"%> <br /> <%= link_to("Revisar cita", "/appointments/#{a.id}") %> </li>
+<% end %>
+<br />
+<div>
+    <%= link_to("Need an Appointment?", new_appointment_path) %>
+</div>
+

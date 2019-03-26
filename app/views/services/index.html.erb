@@ -1,3 +1,19 @@
-<% @services.each do |s| %>
-<li> <%= link_to(s.service_name, "/services/#{s.id}") %> </li>
-<% end %>
+<center>
+<div class="container">         
+    <div>
+        <div class="services-images">
+        <% imagen=["dogvac.jpg","kitpup.jpg"] %>
+        <% imagen.each do|img| %><br>
+        <%= image_tag img, width: "304", height: "200" %>
+        <% end %>
+        </div>
+        <div class="services-images">
+        <% @services.each do |s| %>
+        <div class="my_service">
+        <%= link_to(s.service_name, "/services/#{s.id}") %><br />
+        </div>
+        <% end %>           
+        </div>
+    </div>
+</div>
+</center>

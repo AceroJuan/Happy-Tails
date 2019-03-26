@@ -1,0 +1,9 @@
+<div>
+    <% if user_signed_in? %> 
+        <%= link_to("Register your pet", new_user_pet_path(current_user.id)) %>
+    <% end %>
+</div>
+
+<% @pets.each do |pet| %>
+<li> Pet Name: <%= link_to(pet.pet_name, user_pet_path(current_user, pet.id)) %> </li>
+<% end %>

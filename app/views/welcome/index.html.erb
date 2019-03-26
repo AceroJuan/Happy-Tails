@@ -1,15 +1,9 @@
-<div>
-    <% if user_signed_in? %> 
-        <%= link_to("Register your pet", new_user_pet_path(current_user.id)) %>
-    <% end %>
-</div>
 
-<div>
-    <ul>
-        <% @pet.each do |pet| %>
-        <li>Pet Name: <%= link_to(pet.pet_name, user_pet_path(current_user.id, pet.id)) %></li>
-        <%= pet.pet_age %> Years | 
-        Specie: <%= pet.pet_race %> <br />
-    <% end %>
-    </ul>
-</div>
+<header class="v-header container">
+    <div class="fullscreen-video-wrap"><%= video_tag(["cats.mp4"], autoplay: :autoplay , loop: :loop, muted: :muted) %></div>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+        <h1>Happy Tails Vets.</h1>
+        <p>Because we know how much you love them, we treat your pets like our family</p>
+    </div>
+</header>
