@@ -30,20 +30,25 @@ body {
     background-color: #297d9e;
     font-family: Arial, Helvetica, sans-serif;
     position: static;
+    box-shadow: 0 10px 10px -6px #777;
 }
 .navbar-link {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
     font-family: Arial, Helvetica, sans-serif;
+    border: none;
     color: white;
-    padding: 5px 12px;
+    padding: 6px 16px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
+    font-size: 16px;
 }
 .navbar-link:hover {
-    background-color: #217394;
+    background-color: #206a88;/* Green */
     color: white;
+    border-radius: 8px;
     text-decoration: none;
-  }
+}
 .nav {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -67,18 +72,19 @@ body {
 }
 .fullscreen-video-wrap {
     position: absolute;
-    top: 60px;
+    top: 30px;
     left: 0;
     width: 100vw;
-    height: 86vh;
+    height: 95vh;
     overflow: hidden;
+    z-index: -100;
 }
 .fullscreen-video-wrap {
     min-width: 0;
     min-height: 10%;
 }
 .header-overlay {
-    height: 85%;
+    height: 100%;
     width: 100%;
     position: fixed;
     top: 60px;
@@ -88,17 +94,18 @@ body {
     opacity: 0.35;
 }
 .header-content {
-    height: 10vh;
+    height: 50vh;
     width: 65vw;
     position: absolute;
-    top: 250px;
+    top: 42%;
     z-index: 1;
 }
 .header-content h1 {
     font-size: 60px;
-    margin-bottom: 2;
+    margin-bottom: 3;
     text-align: center;
 }
+
 .header-content p {
     font-size: 1.5rem;
     display: block;
@@ -106,7 +113,25 @@ body {
     padding-bottom: 2rem;
 }
 .name, .email, .password, .address, .phone, .cost, .pet, .service  {
-    max-width: 300px;
+    max-width: 300px;   
+}
+.services-images{
+    width: 310px; 
+    float: left; 
+}
+.services{
+    width: 100px;    
+    float: left;
+}
+.my_service{
+    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-left: 100px; 
+}
+.box{
+    margin-top: 15px;
+    margin-left: 20px;
+    color: #343434;
     
 }
 footer {
@@ -119,18 +144,5 @@ footer {
     padding: 10px 12px;
     height: 39px;
     width: 100%;
-}
-.services-images{
-    width:310px; 
-    float:left;
-    padding-left:300px; 
-}
-.services{
-    width:300px;    
-    float:left;
-}
-.my_service{
-    padding-bottom: 100px;
-    padding-top: 100px;
-    padding-left:100px; 
+    z-index: 100;
 }

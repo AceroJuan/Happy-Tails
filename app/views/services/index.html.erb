@@ -1,5 +1,8 @@
-<center>
-<div class="container">         
+<div class="box">
+<h2>Our Services</h2>
+<p>we're pleased to offer the following services</p>
+</div>   
+<div class="container">      
     <div>
         <div class="services-images">
         <% imagen=["dogvac.jpg","kitpup.jpg"] %>
@@ -7,13 +10,12 @@
         <%= image_tag img, width: "304", height: "200" %>
         <% end %>
         </div>
-        <div class="services-images">
+        <div class="services">
         <% @services.each do |s| %>
         <div class="my_service">
-        <%= link_to(s.service_name, "/services/#{s.id}") %><br />
+        <h3><%= link_to(s.service_name, "/services/#{s.id}") %><br /></h3>
         </div>
         <% end %>           
         </div>
     </div>
 </div>
-</center>
