@@ -5,8 +5,14 @@
   <%= f.label :pet_age %>:
   <%= f.number_field :pet_age %><br />
 
-  <%= f.label :pet_race %>:
-  <%= f.text_field :pet_race %><br />
+  <%= f.label :pet_breed %>:
+  <%= f.text_field :pet_breed %><br />
+  
+  <%= f.label :pet_bio %>:
+  <%= f.text_area :pet_bio %><br />
+
+  <%= f.label :pet_picture %>:
+  <%= f.text_field :pet_picture %> <br />
 
   <%= f.submit 'save', data:{confirm: 'save this data?'}  %>
 <% end %>

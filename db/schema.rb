@@ -10,23 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190215034131) do
-
-  create_table "appointments", force: :cascade do |t|
-    t.datetime "appointment_time"
-    t.integer "service_id"
-    t.integer "pet_id"
-    t.index ["pet_id"], name: "index_appointments_on_pet_id"
-    t.index ["service_id"], name: "index_appointments_on_service_id"
-  end
+ActiveRecord::Schema.define(version: 20190328215649) do
 
   create_table "pets", force: :cascade do |t|
     t.string "pet_name"
     t.integer "pet_age"
-    t.string "pet_race"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "pet_breed"
+    t.text "pet_bio"
+    t.string "pet_picture"
     t.index ["user_id"], name: "index_pets_on_user_id"
   end
 
@@ -36,6 +30,8 @@ ActiveRecord::Schema.define(version: 20190215034131) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "vet_id"
+    t.text "service_description"
+    t.string "service_picture"
     t.index ["vet_id"], name: "index_services_on_vet_id"
   end
 
@@ -49,16 +45,13 @@ ActiveRecord::Schema.define(version: 20190215034131) do
     t.datetime "updated_at", null: false
     t.text "address"
     t.integer "phone"
+    t.string "name"
+    t.string "last_name"
+    t.boolean "role"
+    t.text "bio"
+    t.string "picture"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  create_table "vets", force: :cascade do |t|
-    t.string "vet_name"
-    t.string "vet_email"
-    t.integer "vet_phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

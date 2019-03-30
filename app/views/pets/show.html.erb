@@ -1,9 +1,22 @@
-<h1>Hola Show Pets</h1>
+
+<div class="wrapper-card">
+    <div class="image-card">
+        <%= image_tag @pet.pet_picture, width: "327", height: "420" %>
+    </div>
+    <div class="card-info">
+        <div class="card-text">
+            <h1><%= @pet.pet_name %></h1><br />
+            <h2>Breed: <%= @pet.pet_breed %></h2>
+            <h2>Age: <%= @pet.pet_age %></h2>
+            <h2>About your Pet: </h2>
+            <p> <%= @pet.pet_bio %></p>
+        </div>
+    </div>
+</div>
 
 <%= link_to("Edit your pet's data", edit_user_pet_path(current_user.id)) %>
 <%= link_to("Erase the pet's data", user_pet_path(current_user.id), method: :delete, data:{confirm: "are you sure?"}) %>
 
-<div><%= @pet.pet_name %></div>
-<div><%= @pet.pet_age %></div>
-<div><%= @pet.pet_race %></div>
+
+<%= link_to("Back", user_pets_path) %>
 

@@ -105,16 +105,23 @@ body {
     margin-bottom: 3;
     text-align: center;
 }
-
 .header-content p {
     font-size: 1.5rem;
     display: block;
     text-align: center; 
     padding-bottom: 2rem;
 }
-.name, .email, .password, .address, .phone, .cost, .pet, .service  {
+.name, 
+.email, 
+.password, 
+.address, 
+.phone, 
+.cost, 
+.pet, 
+.service  {
     max-width: 300px;   
 }
+// replace this with the wrapper card stuffs
 .services-images{
     width: 310px; 
     float: left; 
@@ -128,12 +135,67 @@ body {
     padding-top: 100px;
     padding-left: 100px; 
 }
+//verify this box class -- delete 
 .box{
     margin-top: 15px;
     margin-left: 20px;
     color: #343434;
-    
 }
+.wrapper-card{
+    height: 420px;
+    width: 654px;
+    margin: 50px auto;
+    border-radius: 7px 7px 7px 7px;
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+.image-card{
+    float: left;
+    height: 420px;
+    width: 327px;
+}
+.image-card img {
+    border-radius: 7px 0 0 7px;
+}
+.card-info {
+    float: left;
+    height: 420px;
+    width: 327px;
+    border-radius: 0 7px 10px 7px;
+    background-color: #ffffff;
+}
+.card-text {
+    height: 300px;
+    width: 327px;
+}
+.card-text h1 {
+    margin: 0 0 0 38px;
+    padding-top: 52px;
+    font-size: 34px;
+    color: #474747;
+    font-family: 'Benthan', serif; 
+}
+.card-text h2 {
+    margin: 0 0 47px 38px;
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #a19f9f;
+    letter-spacing: 0.2em;
+}
+.card-text p {
+    height: 125px;
+    margin: 0 0 0 38px;
+    font-family: 'Playfair Display', serif;
+    color: #8d8d8d;
+    line-height: 1.7em;
+    font-size: 20px;
+    font-weight: lighter;
+    overflow: hidden;
+}
+
 footer {
     background-color: #a3a3a3;
     color: white;

@@ -1,4 +1,3 @@
 class Service < ApplicationRecord
-    belongs_to :vet
-    has_many :appointment
+    belongs_to :user
 end

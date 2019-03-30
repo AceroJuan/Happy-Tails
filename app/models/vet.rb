@@ -1,3 +1,3 @@
 class Vet < ApplicationRecord
-    has_many :service
+    #has_many :service
 end
