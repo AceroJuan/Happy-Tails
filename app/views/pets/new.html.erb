@@ -1,18 +1,23 @@
+<center>
+<br /><br />
+<h1> Register your Pet</h1>
 <%= form_for [current_user, Pet.new] do |f| %>
-  <%= f.label :pet_name %>:
-  <%= f.text_field :pet_name %><br />
+  <div class="form-group">
+    <%= f.label :pet_name %>:
+    <%= f.text_field :pet_name, class: "form-control pet" %><br />
 
-  <%= f.label :pet_age %>:
-  <%= f.number_field :pet_age %><br />
+    <%= f.label :pet_age %>:
+    <%= f.number_field :pet_age, class: "form-control pet" %><br />
 
-  <%= f.label :pet_breed %>:
-  <%= f.text_field :pet_breed %><br />
-  
-  <%= f.label :pet_bio %>:
-  <%= f.text_area :pet_bio %><br />
+    <%= f.label :pet_breed %>:
+    <%= f.text_field :pet_breed, class: "form-control pet" %><br />
+    
+    <%= f.label :pet_bio %>:
+    <%= f.text_area :pet_bio, class: "form-control pet" %><br />
 
-  <%= f.label :pet_picture %>:
-  <%= f.text_field :pet_picture %> <br />
-
+    <%= f.label :pet_picture %>:
+    <%= f.text_field :pet_picture, class: "form-control pet" %> <br />
+  </div>
   <%= f.submit 'save', data:{confirm: 'save this data?'}  %>
 <% end %>
+</center>

@@ -1,18 +1,24 @@
+<center>
+<br /><br /><br />
+<h2>Edit your Pet's Data</h2>
 <%= form_for [current_user, @pet] do |f| %>
-  <%= f.label :pet_name %>:
-  <%= f.text_field :pet_name %><br />
-
-  <%= f.label :pet_age %>:
-  <%= f.number_field :pet_age %><br />
-
-  <%= f.label :pet_breed %>:
-  <%= f.text_field :pet_breed %><br />
-  
-  <%= f.label :pet_bio %>:
-  <%= f.text_area :pet_bio %><br />
-
-  <%= f.label :pet_picture %>:
-  <%= f.text_field :pet_picture %> <br />
+    <div class="form-group">
+      <%= f.label :pet_name %>:
+      <%= f.text_field :pet_name, class: "form-control pet" %><br />
+      
+      <%= f.label :pet_age %>:
+      <%= f.number_field :pet_age, class: "form-control pet" %><br />
+      
+      <%= f.label :pet_breed %>:
+      <%= f.text_field :pet_breed, class: "form-control pet" %><br />
+      
+      <%= f.label :pet_bio %>:
+      <%= f.text_area :pet_bio, class: "form-control pet" %><br />
+      
+      <%= f.label :pet_picture %>:
+      <%= f.text_field :pet_picture, class: "form-control pet" %> <br />
+  </div>
 
   <%= f.submit 'save', data:{confirm: 'save this data?'}  %>
 <% end %>
+</center>
