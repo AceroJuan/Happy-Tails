@@ -57,6 +57,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rack-cors', :require => 'rack/cors'
 gem 'devise'
-gem 'bootstrap', '~> 4.3.1'
+
+
+gem 'bootstrap'
+
 gem 'jquery-rails'
 gem 'simple_form'
