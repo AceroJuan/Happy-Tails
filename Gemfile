@@ -10,7 +10,7 @@ end
 gem 'rails', '~> 5.1.6', '>= 5.1.6.1'
 
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.12'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -57,6 +57,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rack-cors', :require => 'rack/cors'
 gem 'devise'
-gem 'bootstrap', '~> 4.0.0'
+
+
+gem 'bootstrap'
+
 gem 'jquery-rails'
 gem 'simple_form'
